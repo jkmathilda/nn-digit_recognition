@@ -13,3 +13,6 @@ x_test = tf.keras.utils.normalize(x_test, axis=1)
 # Start Neural Network
 model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Flatten(input_shape=(28,28)))
+model.add(tf.keras.layers.Dense(128, activation='relu'))
+model.add(tf.keras.layers.Dense(128, activation='relu'))
+model.add(tf.keras.layers.Dense(10, activation='softmax'))
