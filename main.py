@@ -24,10 +24,10 @@ model.compile(optimizer="adam", loss='sparse_categorical_crossentropy', metrics=
 model.fit(x_train, y_train, epochs=3)
 
 # Save after running
-# model.save('handwritten.model')
+model.save('handwritten.keras')
 
 # Evaluate the model
-model = tf.keras.models.load_model('handwritten.model')
+model = tf.keras.models.load_model('handwritten.keras')
 
 loss, accuracy= model.evaluate(x_test, y_test)
 
