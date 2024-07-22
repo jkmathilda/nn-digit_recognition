@@ -16,3 +16,12 @@ model.add(tf.keras.layers.Flatten(input_shape=(28,28)))
 model.add(tf.keras.layers.Dense(128, activation='relu'))
 model.add(tf.keras.layers.Dense(128, activation='relu'))
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
+
+# Compile the model
+model.compile(optimizer="adam", loss='sparse-categorical_crossentropy', metrics=['accuracy'])
+
+# Train the model
+model.fit(x_train, y_train, epochs=3)
+
+# Save after running
+model.save('handwritten.model')
