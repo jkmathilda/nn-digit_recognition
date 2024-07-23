@@ -8,16 +8,12 @@
 
 ### Setting up a Virtual Environment
 
-    cd ./nn-digit_recognition
-
     pyenv versions
 
     pyenv local 3.11.6
 
     echo '.env'  >> .gitignore
     echo '.venv' >> .gitignore
-
-    ls -la
 
     python -m venv .venv        # create a new virtual environment
 
@@ -32,3 +28,7 @@
     pip install -r requirements.txt
 
     pip freeze | tee requirements.txt.detail
+
+### Running the project
+
+    python main.py
